@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/REST-Countries-API/static/css/main.6ac534ea.css",
-    "main.js": "/REST-Countries-API/static/js/main.3ead8412.js",
+    "main.js": "/REST-Countries-API/static/js/main.c65f6347.js",
     "static/js/453.9e78c1ea.chunk.js": "/REST-Countries-API/static/js/453.9e78c1ea.chunk.js",
     "static/media/preloader-light.svg": "/REST-Countries-API/static/media/preloader-light.c493123b56bee1e706b23905e9182f0c.svg",
     "static/media/preloader-dark.svg": "/REST-Countries-API/static/media/preloader-dark.eaa8bffc74ec0c2fab847832ca73780f.svg",
     "index.html": "/REST-Countries-API/index.html",
     "main.6ac534ea.css.map": "/REST-Countries-API/static/css/main.6ac534ea.css.map",
-    "main.3ead8412.js.map": "/REST-Countries-API/static/js/main.3ead8412.js.map",
+    "main.c65f6347.js.map": "/REST-Countries-API/static/js/main.c65f6347.js.map",
     "453.9e78c1ea.chunk.js.map": "/REST-Countries-API/static/js/453.9e78c1ea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ac534ea.css",
-    "static/js/main.3ead8412.js"
+    "static/js/main.c65f6347.js"
   ]
 }
