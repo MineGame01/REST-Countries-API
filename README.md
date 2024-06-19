@@ -66,7 +66,6 @@ Users should be able to:
 - [Redux Toolkit](https://redux-toolkit.js.org/) - Library for React
 - [Styled Components](https://styled-components.com/) - For styles
 - [Axios](https://axios-http.com/) - Library for HTTP requests
-- [Formik](https://formik.org/) - Creating Forms
 
 ### What I learned
 
