@@ -1,5 +1,4 @@
 import React from "react";
-import { useField } from "formik";
 import { FaSearch } from "react-icons/fa";
 import styled, { css } from "styled-components";
 import { 
@@ -61,15 +60,13 @@ button {
 ${props => props.$search && inputSearch};
 `
 
-const InputField = ({ isSearch, ...props }) => {
-    const [field, meta] = useField(props);
-
+const InputField = ({ isSearch, meta = {}, ...props }) => {
     return <>
         <InputStyle $search={isSearch} $error={meta.touched && meta.error} {...props}>
             <button type="submit">
-                <FaSearch/>
+                <FaSearch/> 
             </button>
-            <input autoComplete="off" {...field} {...props} />
+            <input {...props} />
         </InputStyle>
         <ErrorMessage>
             {meta.touched && meta.error && <span>{meta.error}</span>}

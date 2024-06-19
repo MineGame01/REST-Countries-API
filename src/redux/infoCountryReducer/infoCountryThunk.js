@@ -3,9 +3,13 @@ import { infoCountryAPI } from "../../api/infoCountryAPI";
 
 export const getInfoCountryThunk = createAsyncThunk(
     "infoCountry/getInfoCountryThunk",
-    async (nameCountry) => {
-        const res = await infoCountryAPI.getInfoCountry(nameCountry);
-        return res.data;
+    async (nameCountry, { rejectWithValue }) => {
+        try {
+            const res = await infoCountryAPI.getInfoCountry(nameCountry);
+            return res.data;
+        } catch (err) {
+            return rejectWithValue(err.response.data);
+        }
     }
 )
 

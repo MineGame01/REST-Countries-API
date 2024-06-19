@@ -21,7 +21,9 @@ const rootReducer = createSlice({
                 state.error.push(action.error.message);
             })
             .addCase(getInfoCountryThunk.rejected, (state, action) => {
-                state.error.push(action.payload?.message || action.error.message);
+                const errorSet = new Set();
+                errorSet.add(action.payload?.message || action.error.message);
+                state.error = Array.from(errorSet);
             })
     }
 });

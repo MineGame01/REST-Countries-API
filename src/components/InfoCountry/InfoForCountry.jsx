@@ -98,6 +98,7 @@ const InfoForCountry = ({
                 ["Currencies:", valuesToString(currencies, "name")],
                 ["Languages:", valuesToString(languages)],
             ]
+            default: return [];
         } 
     }
 
