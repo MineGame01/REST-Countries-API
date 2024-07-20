@@ -5,6 +5,7 @@ import CountryCard from "./CountryCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCountriesThunk } from "../../redux/countriesListReducer/countriesListThunk";
 import PreLoaderCenter from "../common/PreLoaderCenter/PreLoaderCenter";
+import ButtonDefault from "../common/ButtonDefault/ButtonDefault";
 
 const CountriesListBody = styled.div``
 
@@ -12,6 +13,12 @@ const Wrapper = styled.div`
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 gap: 40px;
+`
+
+const ButtonMore = styled(ButtonDefault)`
+width: 100%;
+padding: 20px 20px;
+margin: 20px 0 0 0;
 `
 
 const CountriesList = () => {
@@ -30,22 +37,6 @@ const CountriesList = () => {
         setPortionCountries(20);
     }, [arrayCountries]);
 
-    useEffect(() => {
-        const handleScroll = () => {
-          const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    
-          if (scrollTop + window.innerHeight >= document.documentElement.scrollHeight) {
-            setPortionCountries(value => value + 20);
-          }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
-
     if (isLoading) return <PreLoaderCenter />
     return <CountriesListBody>
         <Container>
@@ -59,8 +50,12 @@ const CountriesList = () => {
                         population={population}
                         flags={flags}
                     />
-                ))}  
+                ))}
             </Wrapper>
+            <ButtonMore 
+            onClick={() => setPortionCountries(portion => portion + 20)}>
+                More
+            </ButtonMore>
         </Container>
     </CountriesListBody>
 }

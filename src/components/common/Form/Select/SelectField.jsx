@@ -72,7 +72,7 @@ const SelectField = ({ defaultValue = "", optionArray, meta = {}, onSubmit }) =>
 
     useEffect(() => {
         onSubmit(value);
-    }, [value]);
+    }, [value, onSubmit]);
 
     const handleChange = event => {
         setValue(event.target.dataset.value);

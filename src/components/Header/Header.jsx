@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Title } from "../../style/components";
 import styled from "styled-components";
-import ButtonTheme from "./../common/ButtonTheme/ButtonTheme";
+import ButtonTheme from "../common/ButtonTheme/ButtonTheme";
 import { styleThemeBackgroundElement } from "../../style/style";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
